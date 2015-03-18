@@ -15,7 +15,14 @@ angular.module('compUSA', [])
 	vm.computerData = {};
 
 	vm.addComputer = function() {
-		
+
+		vm.computer.push({
+			name: vm.computerData.name,
+			name: vm.computerData.color,
+			name: vm.computerData.ram
+		});
+
+		vm.computerData = {};
 	};
 
 });
