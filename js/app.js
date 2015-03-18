@@ -16,10 +16,10 @@ angular.module('compUSA', [])
 
 	vm.addComputer = function() {
 
-		vm.computer.push({
+		vm.computers.push({
 			name: vm.computerData.name,
-			name: vm.computerData.color,
-			name: vm.computerData.ram
+			color: vm.computerData.color,
+			ram: vm.computerData.ram
 		});
 
 		vm.computerData = {};
