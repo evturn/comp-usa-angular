@@ -12,4 +12,10 @@ angular.module('compUSA', [])
 		{name: 'Fujitsu', color: 'Silver', ram: 64}
 	];
 
+	vm.computerData = {};
+
+	vm.addComputer = function() {
+		
+	};
+
 });
