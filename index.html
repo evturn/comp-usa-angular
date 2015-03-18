@@ -15,11 +15,24 @@
 	<div class="container" ng-controller="mainController as main">
 
 		<div class="jumbotron">
-
 			{{ main.message }}
-
 		</div>
 		
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<td>Name</td>
+				<td>Color</td>
+				<td>Ram</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="computer in main.computers">
+				
+			</tr>
+		</tbody>
+	</table>
+
 	</div>
 
 </body>
