@@ -5,8 +5,15 @@
 	<title>Comp USA | For All Your Needs</title>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<style>
-		body 	{ padding-top:50px; }
-		table { background: beige; }
+		body 	{
+			padding-top:50px;
+		  background: beige;
+		}
+		table {
+			color: blue;
+			font-weight: 500;
+			background-color: beige;
+		}
 		.jumbotron {
 			color: white; 
 			background-color: red;
@@ -22,48 +29,49 @@
 		<div class="jumbotron text-center">
 			<h1>{{ main.title }}</h1>
 			<h3>{{ main.message }}</h3>
-		</div>
 
-		<div class="form-group">
-			<label class="label label-primary">Change slogan</label>
-			<input type="text" class="form-control input-lg" ng-model="main.message">
-		</div>
-		
-	<table class="table table-bordered">
-		<thead>
-			<tr>
-				<td>Brand</td>
-				<td>Color</td>
-				<td>Ram</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="computer in main.computers">
-				<td>{{ computer.name }}</td>
-				<td>{{ computer.color }}</td>
-				<td>{{ computer.ram }}</td>
-			</tr>
-		</tbody>
-	</table>
+			<div class="form-group">
+				<label class="label label-primary">Change slogan</label>
+				<input type="text" class="form-control input-lg" ng-model="main.message">
+			</div>
+			
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<td>Brand</td>
+						<td>Color</td>
+						<td>Ram</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="computer in main.computers">
+						<td>{{ computer.name }}</td>
+						<td>{{ computer.color }}</td>
+						<td>{{ computer.ram }}</td>
+					</tr>
+				</tbody>
+			</table>
 
-	<form class="form-inline" ng-submit="main.addComputer()">
-		<div class="form-group">
-			<label>Brand</label>
-			<input type="text" class="form-control" ng-model="main.computerData.name">
+			<form class="form-inline" ng-submit="main.addComputer()">
+				<div class="form-group">
+					<label>Brand</label>
+					<input type="text" class="form-control" ng-model="main.computerData.name">
+				</div>
+				<div class="form-group">
+					<label>Color</label>
+					<input type="text" class="form-control" ng-model="main.computerData.color">
+				</div>
+				<div class="form-group">
+					<label>Memory
+					</label>
+					<input type="text" class="form-control" ng-model="main.computerData.ram">
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-danger">Add</button>
+				</div>
+			</form>
+
 		</div>
-		<div class="form-group">
-			<label>Color</label>
-			<input type="text" class="form-control" ng-model="main.computerData.color">
-		</div>
-		<div class="form-group">
-			<label>Memory
-			</label>
-			<input type="text" class="form-control" ng-model="main.computerData.ram">
-		</div>
-		<div class="form-group">
-			<button type="submit" class="btn btn-danger">Add</button>
-		</div>
-	</form>
 
 	</div>
 
