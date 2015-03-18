@@ -11,4 +11,5 @@ angular.module('compUSA', [])
 		{name: 'Dell', color: 'Black', ram: 64},
 		{name: 'Fujitsu', color: 'Silver', ram: 64}
 	];
+	
 });
